@@ -15,10 +15,13 @@ To use this font, simply put the folders in the root directory of your web serve
 The call the Clear Sans font on your CSS with:
 
 ```css
-font-family: 'Clear Sans';
+.class {
+  font-family: 'Clear Sans', sans-serif;
+}
 ```
 
 ## License
 
 The Clear Sans typeface is released by under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
+
 This webfont conversion is released under the [MIT license](https://github.com/resir014/Clear-Sans-Webfont/blob/master/LICENSE).
