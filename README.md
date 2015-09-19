@@ -1,5 +1,7 @@
 # Clear Sans Webfont
 
+> Webfont conversion of the Clear Sans typeface designed by Intel.
+
 This is the webfont conversion for the [Clear Sans](https://01.org/clear-sans) typeface, designed by the [Intel® Open Source Technology Center](https://01.org/) This webfont conversion is available in TrueType, WOFF, EOT and SVG format, which ensures that you have the best format for the font to be displayed smoothly on any system.
 
 [View the specimen.](http://resir014.github.io/Clear-Sans-Webfont/)
@@ -22,6 +24,6 @@ The call the Clear Sans font on your CSS with:
 
 ## License
 
-The Clear Sans typeface is released by under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
+The Clear Sans typeface is &copy; Intel Corporation, released under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
 
-This webfont conversion is released under the [MIT license](https://github.com/resir014/Clear-Sans-Webfont/blob/master/LICENSE).
+This webfont conversion is &copy; Resi Respati, released under the [MIT license](https://github.com/resir014/Clear-Sans-Webfont/blob/master/LICENSE).
