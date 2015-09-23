@@ -1,0 +1,21 @@
+// Base resets
+$container-width: 48rem;
+$container-width-em: 48em;
+$grid-gutter: 1rem;
+$grid-breakpoint: 38em;
+
+// Typography
+$font-stack: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-monospace: Menlo, Monaco, "Courier New", monospace;
+$font-size-base: 14px;
+$font-size-larger: 16px;
+$line-height-base: 1.5;
+
+// Colors
+$text-color-primary: #222;
+$text-color-muted: #6f6f6f;
+$accent-color: #09c;
+$background-color-primary: #fff;
+$background-color-header: #333;
+$background-color-table-odd: #f9f9f9;
+$border-color: #e5e5e5;

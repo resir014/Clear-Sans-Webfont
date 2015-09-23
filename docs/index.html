@@ -2,12 +2,14 @@
 layout: default
 ---
 
-<section id="download">
+<section id="download" class="download">
   <div class="container">
     <div class="content content-borderless">
       <div class="center">
-        <p><a class="btn btn-default btn-lg" href="https://github.com/resir014/Clear-Sans-Webfont/archive/master.zip">Download now</a></p>
-        <span class="download-description">zipped, 4 MB, includes all weights</span>
+        <p>
+          <a class="btn btn-default" href="https://github.com/resir014/Clear-Sans-Webfont/archive/master.zip">Download now</a>
+        </p>
+        <span class="download-description">current version: {{ site.version }}</span>
       </div>
     </div>
   </div>
@@ -20,9 +22,12 @@ layout: default
 
       <hr class="divider" />
 
-      <p><a href="https://01.org/clear-sans">Clear Sans</a> is an open-source typeface designed by the <a href="https://01.org/">Intel&reg; Open Source Technology Center</a>, and is released under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0 license</a>. This is the webfont conversion available in TrueType, WOFF, EOT and SVG format, which ensures that you have the best format for the font to be displayed smoothly on any system.</p>
-
-      <p>Feel free to expand on this project by <a href="https://github.com/resir014/Clear-Sans-Webfont">forking it on GitHub</a>. Giving back is highly encouraged.</p>
+      <p class="lead">
+        <a href="https://01.org/clear-sans">Clear Sans</a> is an open-source typeface designed by the <a href="https://01.org/">Intel&reg; Open Source Technology Center</a>, and is released under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0 license</a>. This is the webfont conversion available in TrueType, WOFF, EOT and SVG format, which ensures that you have the best format for the font to be displayed smoothly on any system.
+      </p>
+      <p class="lead">
+        Feel free to expand on this project by <a href="https://github.com/resir014/Clear-Sans-Webfont">forking it on GitHub</a>. Giving back is highly encouraged.
+      </p>
     </div>
   </div>
 </section>
@@ -38,13 +43,13 @@ layout: default
 
       <div class="samples">
         <div class="row">
-          <div class="col-6">
+          <div class="column one-half">
             <button id="btnThin" class="btn btn-default btn-lg btn-block sample-thin">100 Thin</button>
             <button id="btnLight" class="btn btn-default btn-lg btn-block sample-light">300 Light</button>
             <button id="btnRegular" class="btn btn-default btn-lg btn-block sample-regular">400 Regular</button>
             <button id="btnItalic" class="btn btn-default btn-lg btn-block sample-regular sample-italic">400 Italic</button>
           </div>
-          <div class="col-6">
+          <div class="column one-half">
             <button id="btnMedium" class="btn btn-default btn-lg btn-block sample-medium">500 Medium</button>
             <button id="btnMediumItalic" class="btn btn-default btn-lg btn-block sample-medium sample-italic">500 Medium Italic</button>
             <button id="btnBold" class="btn btn-default btn-lg btn-block sample-bold">700 Bold</button>
@@ -56,7 +61,7 @@ layout: default
   </div>
 </section>
 
-<section id="specimen">
+<section id="specimen" class="specimen">
   <div class="container">
     <div class="content content-borderless">
       <h2>Specimen</h2>
@@ -64,7 +69,7 @@ layout: default
       <hr class="divider" />
 
       <div id="specimen-test" class="row">
-        <div class="col-12">
+        <div class="column">
           <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
           <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
           <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>

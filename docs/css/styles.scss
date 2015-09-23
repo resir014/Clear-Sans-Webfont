@@ -4,415 +4,488 @@
 ---
 
 @import "css/normalize";
+@import "css/variables";
+@import "css/mixins";
 
-/**
- * Slighty unnecessary global box-sizing normalization.
- */
+// Body resets
+//
+// Update the foundational and global aspects of the page.
+
+html {
+  box-sizing: border-box;
+}
 
 *, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  box-sizing: inherit;
 }
 
-/**
- * Typography
- *
- * Base typography structures.
- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $font-stack;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+
+  @media (min-width: $grid-breakpoint) {
+    font-size: $font-size-larger;
+  }
+}
 
 body {
-    font-family: "Clear Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    text-rendering: optimizeLegibility;
-    color: #222222;
-    background-color: #ffffff;
+  color: $text-color-primary;
+  background-color: $background-color-primary;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-.text-left {
-    text-align: left;
+// No `:visited` state is required by default (browsers will use `a`)
+a {
+  color: $accent-color;
+  text-decoration: none;
+
+  // `:focus` is linked to `:hover` for basic accessibility
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  strong {
+    color: inherit;
+  }
 }
 
-.text-center {
-    text-align: center;
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
 }
 
-.text-right {
-    text-align: right;
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 85%;
+  border-collapse: collapse;
+  border: 1px solid $border-color;
 }
+
+td,
+th {
+  padding: .25rem .5rem;
+  border: 1px solid $border-color;
+}
+
+th {
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: $background-color-table-odd;
+}
+
+// Typography
+//
+// Base typography structures.
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
-    font-style: normal;
-    line-height: 1.1;
-}
-
-h1, h2, h3 {
-    margin: 20px 0 10px;
-}
-
-h4, h5, h6 {
-    margin: 10px 0;
-}
-
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    font-weight: normal;
-    color: #6f6f6f;
-    line-height: 0;
-}
-
-h1 small, h2 small, h3 small h4 small, h5 small, h6 small {
-    font-size: 60%;
+  margin-bottom: .5rem;
+  font-weight: 300;
+  line-height: 1.25;
+  color: $text-color-primary;
+  text-rendering: optimizeLegibility;
 }
 
 h1 {
-    font-size: 1.9rem;
+  font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 1.2rem;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
 }
 
-h4 {
-    font-size: 1rem;
-}
-
-h5 {
-    font-size: 1rem;
-}
-
-h6 {
-    font-size: 1rem;
-}
-
-@media only screen and (min-width:48rem) {
-    h1, h2, h3, h4, h5, h6 {
-        line-height: 1.4;
-    }
-
-    h1 {
-        font-size: 2.4rem;
-    }
-
-    h2 {
-        font-size: 2.0rem;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-
-    h4 {
-        font-size: 1.2rem;
-    }
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 p {
-    margin: 0 0 10px;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-a {
-    color: #0099cc;
-    text-decoration: none;
+strong {
+  color: $text-color-primary;
 }
 
-a:hover, a:focus {
-    color: #428bca;
-    text-decoration: underline;
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: .5rem;
+}
+
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid $border-color;
+  //border-bottom: 1px solid #fff;
+}
+
+abbr {
+  font-size: 85%;
+  font-weight: bold;
+  color: $text-color-primary;
+  text-transform: uppercase;
+
+  &[title] {
+    cursor: help;
+    border-bottom: 1px dotted $text-color-primary;
+  }
+}
+
+blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: $text-color-primary;
+  border-left: .25rem solid $border-color;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 30em) {
+    padding-left: 1.25rem;
+    padding-right: 5rem;
+  }
+}
+
+// Custom type
+//
+// Extend paragraphs with `.lead` for larger introductory text.
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+// Helpers
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .inline {
-    padding-left: 0;
-    margin-left: 0;
-    list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
 }
 
 .inline > li {
-    display: inline-block;
-    padding-right: 5px;
-    padding-left: 5px;
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .center {
-    text-align: center !important;
+  text-align: center !important;
 }
 
-/**
- * Grid System
- */
+// Layout
+//
+// Styles for managing the structural hierarchy of the site.
 
 .container {
-    padding: 0 1rem;
-    margin: 0 auto;
-    max-width: 48rem;
+  max-width: $container-width;
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 3rem;
+  color: #6f6f6f;
+  border-top: 1px solid #ddd;
+
+  small {
+    display: block;
+  }
+}
+
+
+// Grid system
+//
+// Create rows with `.row` to clear the floated columns and outdent the
+// padding on `.column`s with negative margin for alignment.
 
 .row {
-    margin: 0 -1rem;
+  @include clearfix;
+  margin-left: -$grid-gutter;
+  margin-right: -$grid-gutter;
 }
 
-.row:before,
-.row:after {
-    display: table;
-    content: " ";
+.column {
+  float: left;
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+
+  @media (max-width: $grid-breakpoint) {
+    float: none;
+    width: 100%;
+  }
 }
 
-.row:after {
-    clear: both;
+// Column widths
+@media (min-width: $grid-breakpoint) {
+  .one-third {
+    width: 33.333333%;
+  }
+
+  .two-thirds {
+    width: 66.666667%;
+  }
+
+  .one-fourth {
+    width: 25%;
+  }
+
+  .one-half {
+    width: 50%;
+  }
+
+  .three-fourths {
+    width: 75%;
+  }
+
+  .one-fifth {
+    width: 20%;
+  }
+
+  .four-fifths {
+    width: 80%;
+  }
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 1rem;
-    padding-left: 1rem;
+// Additional CLearfix
+.clearfix {
+  @include clearfix;
 }
 
-@media (min-width: 48rem) {
-    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-        float: left;
-    }
+// Custom Styles
+//
+// Additional styles go below here.
 
-    .push { float: right; }
-
-    .col-12 { width: 100%; }
-    .col-8 { width: 66.66666666666666%; }
-    .col-6 { width: 50%; }
-    .col-4 { width: 33.33333333333333%; }
-    .col-3 { width: 25%; }
-}
-
-/* Additional CLearfix */
-.clearfix:before,
-.clearfix:after {
-    display: table;
-    content: " ";
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/**
- * Custom Styles
- */
-
+// Divider between heading and content
 .divider {
-    margin-bottom: 1.11111rem;
-    max-width: 12rem;
-    border: 0;
-    border-top: 2px solid #dddddd;
+  margin: 1.1rem auto;
+  max-width: 12rem;
+  border: 0;
+  border-top: 2px solid #dddddd;
 }
 
+// Header
 header {
-    background-color: #333;
-    color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-    padding: 3rem 16.66667%;
-    position: relative;
-    padding: 3rem 0;
-}
+  background-color: #333;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  padding: 3rem 16.66667%;
+  position: relative;
+  padding: 1.6rem 0;
 
-header .container {
+  .container {
     width: 100%;
     text-align: center;
-}
+  }
 
-header h1 {
+  h1 {
     line-height: 1em;
     margin: 0 0 .5rem 0;
+    color: inherit;
+    font-size: 2.5rem;
     text-align: center;
-}
+  }
 
-header p {
+  p {
     color: rgba(255,255,255,.75);
     display: block;
     margin: 0;
     text-align: center;
+  }
+
+  @media (min-width: $grid-breakpoint) {
+    padding: 3rem 0;
+
+    h1 {
+      font-size: 3.6rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
 }
 
-@media only screen and (min-width:36rem) {
-    header h1 {
-        font-size: 3.2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-}
-
-@media (min-width: 48rem) {
-    header h1 {
-        font-size: 4em;
-    }
-
-    header p {
-        font-size: 1.2em;
-    }
-}
-
-section h2 {
-    font-size: 2.0rem;
+// Base styles for `<section>`
+section {
+  h2 {
+    font-size: 2rem;
     margin: 0;
     text-align: center;
-    line-height: 1.4;
-}
 
-@media only screen and (min-width:36rem) {
-    section h2 {
-        font-size: 2.4rem;
+    @media (min-width: $grid-breakpoint) {
+      font-size: 2.4rem;
     }
+  }
 }
 
+// Standard content wrapper
 .content {
-    border: 1px solid #dddddd;
-    border-radius: 1rem;
-    margin: 2.5rem 0;
-    padding: 1.6rem;
-    background: #ffffff;
-}
+  border: 1px solid #dddddd;
+  border-radius: 1rem;
+  margin: 2.5rem 0;
+  padding: 1.6rem;
+  background: #ffffff;
 
-.content p {
+  p {
     font-weight: 300;
+  }
 }
 
+// Borderless content wrapper
 .content-borderless {
-    border: 0;
-    border-radius: 0;
-    padding: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
 }
+
+// Samples
 
 .samples {
-    /*margin: 0 1.1rem;*/
-}
+  //margin: 0 1.1rem;
 
-.samples .btn {
+  .btn {
     margin: 1.1rem 0;
+  }
 }
 
-#about p {
+.sample-lead {
+  @media (min-width: $grid-breakpoint) {
     font-size: 1.1rem;
-}
-
-@media (min-height: 36rem) {
-    .sample-lead {
-        font-size: 1.1rem;
-    }
+  }
 }
 
 .sample-thin {
-    font-weight: 100 !important;
+  font-weight: 100 !important;
 }
 
 .sample-light {
-    font-weight: 300 !important;
+  font-weight: 300 !important;
 }
 
 .sample-regular {
-    font-weight: 400 !important;
+  font-weight: 400 !important;
 }
 
 .sample-medium {
-    font-weight: 500 !important;
+  font-weight: 500 !important;
 }
 
 .sample-bold {
-    font-weight: 700 !important;
+  font-weight: 700 !important;
 }
 
 .sample-italic {
-    font-style: italic !important;
+  font-style: italic !important;
 }
 
-#download p {
-    text-align: center;
-}
+// Base button styles.
 
 .btn {
-    padding: 8px 16px;
-    background-color: #C4C4C4;
-    border: 1px solid #AFAFAF;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    color: #FFFFFF;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 20px;
-    text-decoration: none;
-    -webkit-transition: all .15s;
-    -moz-transition: all .15s;
-    -o-transition: all .15s;
-    transition: all .15s;
-}
-.btn:hover {
+  padding: 1rem 1.5rem;
+  background-color: #C4C4C4;
+  border: 1px solid #AFAFAF;
+  border-radius: 5px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.1rem;
+  text-decoration: none;
+  transition: all .15s;
+
+  &:hover {
     background-color: #B3B3B3;
     border-color: #919191;
     color: #FFFFFF;
     text-decoration: none;
-}
-
-.btn-default {
-    background-color: #FCFCFC;
-    border-color: #C7C7C7;
-    color: #070707;
-}
-
-.btn-default:hover {
-    background-color: #F2F2F2;
-    border-color: #B1B1B1;
-    color: #070707;
+  }
 }
 
 .btn-block {
-    display: block;
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0;
+  display: block;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
 }
 
-.btn-lg {
-    padding: 10px 20px;
-    font-size: 18px;
-    line-height: 24px;
+.btn-default {
+  background-color: #FCFCFC;
+  border-color: #C7C7C7;
+  color: #070707;
+
+  &:hover {
+    background-color: #F2F2F2;
+    border-color: #B1B1B1;
+    color: #070707;
+  }
 }
 
-#download p {
+// Download button.
+.download {
+  p {
     margin-bottom: 0.1rem;
-}
+    text-align: center;
+  }
 
-.download-description {
+  .download-description {
     font-size: 80%;
     color: #6f6f6f;
+  }
 }
 
-#specimen {
-    font-size: 1.1rem;
-}
-
-footer {
-    margin-top: 1.1rem;
-    padding: 1rem 0;
-    border-top: 1px solid #dddddd;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.8rem;
-    color: #6f6f6f;
-}
-
-footer a:hover, a:focus {
-    color: #0099cc;
-    text-decoration: none;
+// Base font size for specimen.
+.specimen {
+  font-size: 1.1rem;
 }
