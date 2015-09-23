@@ -1,0 +1,27 @@
+{
+  "name": "clear-sans-webfont",
+  "version": "0.1.0",
+  "homepage": "https://github.com/resir014/Clear-Sans-Webfont",
+  "authors": [
+    "Resi Respati <resir014@gmail.com>"
+  ],
+  "description": "Webfont conversion of the Clear Sans typeface designed by Intel.",
+  "main": "./css/clear-sans.css",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "webfont",
+    "intel",
+    "clear-sans",
+    "clearsans"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,26 @@
+permalink: pretty
+relative_permalinks: true
+
+markdown: kramdown
+highlighter: pygments
+
+source: docs
+
+title: Clear Sans Webfont
+tagline: Webfont conversion of the Clear Sans typeface designed by Intel.
+url: http://resir014.github.io
+baseurl: /Clear-Sans-Webfont
+exclude: ["Makefile", "README.md", "less", "node_modules", "package.json"]
+
+sass:
+  sass_dir: ../
+  style: compressed
+
+version: 2.3.3
+github:
+  repo: https://github.com/resir014/Clear-Sans-Webfont
+
+author:
+  name: Resi Respati
+  url: http://resir014.github.io/
+  email: resir014@gmail.com
