@@ -1,0 +1,418 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
+@import "css/normalize";
+
+/**
+ * Slighty unnecessary global box-sizing normalization.
+ */
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/**
+ * Typography
+ *
+ * Base typography structures.
+ */
+
+body {
+    font-family: "Clear Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-rendering: optimizeLegibility;
+    color: #222222;
+    background-color: #ffffff;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.1;
+}
+
+h1, h2, h3 {
+    margin: 20px 0 10px;
+}
+
+h4, h5, h6 {
+    margin: 10px 0;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: normal;
+    color: #6f6f6f;
+    line-height: 0;
+}
+
+h1 small, h2 small, h3 small h4 small, h5 small, h6 small {
+    font-size: 60%;
+}
+
+h1 {
+    font-size: 1.9rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+@media only screen and (min-width:48rem) {
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.4;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 2.0rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+a {
+    color: #0099cc;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #428bca;
+    text-decoration: underline;
+}
+
+.inline {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.inline > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.center {
+    text-align: center !important;
+}
+
+/**
+ * Grid System
+ */
+
+.container {
+    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 48rem;
+}
+
+.row {
+    margin: 0 -1rem;
+}
+
+.row:before,
+.row:after {
+    display: table;
+    content: " ";
+}
+
+.row:after {
+    clear: both;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+@media (min-width: 48rem) {
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        float: left;
+    }
+
+    .push { float: right; }
+
+    .col-12 { width: 100%; }
+    .col-8 { width: 66.66666666666666%; }
+    .col-6 { width: 50%; }
+    .col-4 { width: 33.33333333333333%; }
+    .col-3 { width: 25%; }
+}
+
+/* Additional CLearfix */
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * Custom Styles
+ */
+
+.divider {
+    margin-bottom: 1.11111rem;
+    max-width: 12rem;
+    border: 0;
+    border-top: 2px solid #dddddd;
+}
+
+header {
+    background-color: #333;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    padding: 3rem 16.66667%;
+    position: relative;
+    padding: 3rem 0;
+}
+
+header .container {
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    line-height: 1em;
+    margin: 0 0 .5rem 0;
+    text-align: center;
+}
+
+header p {
+    color: rgba(255,255,255,.75);
+    display: block;
+    margin: 0;
+    text-align: center;
+}
+
+@media only screen and (min-width:36rem) {
+    header h1 {
+        font-size: 3.2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 48rem) {
+    header h1 {
+        font-size: 4em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+}
+
+section h2 {
+    font-size: 2.0rem;
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+@media only screen and (min-width:36rem) {
+    section h2 {
+        font-size: 2.4rem;
+    }
+}
+
+.content {
+    border: 1px solid #dddddd;
+    border-radius: 1rem;
+    margin: 2.5rem 0;
+    padding: 1.6rem;
+    background: #ffffff;
+}
+
+.content p {
+    font-weight: 300;
+}
+
+.content-borderless {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+.samples {
+    /*margin: 0 1.1rem;*/
+}
+
+.samples .btn {
+    margin: 1.1rem 0;
+}
+
+#about p {
+    font-size: 1.1rem;
+}
+
+@media (min-height: 36rem) {
+    .sample-lead {
+        font-size: 1.1rem;
+    }
+}
+
+.sample-thin {
+    font-weight: 100 !important;
+}
+
+.sample-light {
+    font-weight: 300 !important;
+}
+
+.sample-regular {
+    font-weight: 400 !important;
+}
+
+.sample-medium {
+    font-weight: 500 !important;
+}
+
+.sample-bold {
+    font-weight: 700 !important;
+}
+
+.sample-italic {
+    font-style: italic !important;
+}
+
+#download p {
+    text-align: center;
+}
+
+.btn {
+    padding: 8px 16px;
+    background-color: #C4C4C4;
+    border: 1px solid #AFAFAF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    text-decoration: none;
+    -webkit-transition: all .15s;
+    -moz-transition: all .15s;
+    -o-transition: all .15s;
+    transition: all .15s;
+}
+.btn:hover {
+    background-color: #B3B3B3;
+    border-color: #919191;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.btn-default {
+    background-color: #FCFCFC;
+    border-color: #C7C7C7;
+    color: #070707;
+}
+
+.btn-default:hover {
+    background-color: #F2F2F2;
+    border-color: #B1B1B1;
+    color: #070707;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+#download p {
+    margin-bottom: 0.1rem;
+}
+
+.download-description {
+    font-size: 80%;
+    color: #6f6f6f;
+}
+
+#specimen {
+    font-size: 1.1rem;
+}
+
+footer {
+    margin-top: 1.1rem;
+    padding: 1rem 0;
+    border-top: 1px solid #dddddd;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #6f6f6f;
+}
+
+footer a:hover, a:focus {
+    color: #0099cc;
+    text-decoration: none;
+}

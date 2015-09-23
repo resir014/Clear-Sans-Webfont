@@ -1,0 +1,36 @@
+{
+  "name": "clear-sans-webfont",
+  "version": "0.1.0",
+  "description": "Webfont conversion of the Clear Sans typeface designed by Intel.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/resir014/Clear-Sans-Webfont.git"
+  },
+  "keywords": [
+    "webfont",
+    "intel",
+    "clear-sans",
+    "clearsans"
+  ],
+  "author": "Resi Respati <resir014@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/resir014/Clear-Sans-Webfont/issues"
+  },
+  "homepage": "https://github.com/resir014/Clear-Sans-Webfont#readme",
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.3",
+    "grunt-build-control": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jekyll": "^0.4.2",
+    "grunt-postcss": "^0.6.0",
+    "grunt-sass": "^1.0.0",
+    "load-grunt-tasks": "^3.3.0"
+  }
+}

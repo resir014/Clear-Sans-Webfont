@@ -22,6 +22,54 @@ The call the Clear Sans font on your CSS with:
 }
 ```
 
+## Working with docs
+
+### Requirements
+
+* [Node.js (v0.12.x or v4.x)](http://nodejs.org/download/)
+* [Ruby (>=v2.0.0)](https://www.ruby-lang.org/en/)
+* Jekyll (>=v2.0.0): `$ gem install jekyll`
+* Sass: `$ gem install sass`
+* Grunt: `$ npm install -g grunt-cli`
+
+Install the Node dependencies by running this command:
+
+```
+$ npm install
+```
+
+### Running locally
+
+Open a terminal window and run the following command to start a Jekyll server:
+
+```
+$ jekyll serve
+```
+
+Then, open another terminal window and run the following command to automatically build the CSS every time a file is changed:
+
+```
+$ grunt watch
+```
+
+Alternatively, you can manually run `grunt` and `jekyll serve` when needed.
+
+### Deploying to `gh-pages`
+
+Run the following command to deploy the docs to the `gh-pages` branch.
+
+```
+$ grunt publish
+```
+
+## Contributing
+
+1. [Fork it](https://github.com/resir014/Clear-Sans-Webfont/fork)
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Create a new Pull Request
+
 ## License
 
 The Clear Sans typeface is &copy; Intel Corporation, released under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
