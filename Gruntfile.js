@@ -61,10 +61,13 @@ module.exports = function(grunt) {
 
     // Build Jekyll site.
     jekyll: {
-      options: {
-        src: 'docs',
-        dest: '_site',
-        config: '_config.yml'
+      build: {
+        options: {
+          bundleExec: true,
+          src: 'docs',
+          dest: '_site',
+          config: '_config.yml'
+        }
       }
     },
 
