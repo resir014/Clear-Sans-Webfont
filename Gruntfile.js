@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 
     // Clean previous versions of the webfont CSS
     clean: {
-      dist: ['docs/css/clear-sans.css', 'docs/fonts/**']
+      dist: ['docs/css/clear-sans.css']
     },
 
     // Copy font files to `docs`
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           pwd: './',
-          src: ['css/**', 'fonts/**'],
+          src: ['css/**'],
           dest: 'docs'
         }]
       }
