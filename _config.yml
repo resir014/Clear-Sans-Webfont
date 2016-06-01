@@ -12,7 +12,7 @@ baseurl: "/Clear-Sans-Webfont"
 exclude: ["Makefile", "README.md", "less", "node_modules", "package.json"]
 
 sass:
-  sass_dir: ../
+  sass_dir: ../css
   style: compressed
 
 version: 0.1.0

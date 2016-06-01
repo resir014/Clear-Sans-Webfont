@@ -1,0 +1,36 @@
+// Header
+//
+// Simple masthead for the website.
+
+header {
+  padding: 2rem 1rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  color: #eee;
+  background-color: #333;
+
+  .container {
+    width: 100%;
+    text-align: center;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 3.25rem;
+    color: inherit;
+  }
+
+  p {
+    margin: 0;
+    color: transparentize(#eee, .5);
+  }
+}

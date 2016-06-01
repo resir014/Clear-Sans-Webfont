@@ -6,14 +6,16 @@ $grid-breakpoint: 38em;
 
 // Typography
 $font-stack: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-stack-monospace: Menlo, Monaco, "Courier New", monospace;
-$font-size-base: 14px;
-$font-size-larger: 16px;
+$font-stack-monospace: Menlo, Monaco, "Consolas", "Courier New", monospace;
+$font-size-base: 16px;
+$font-size-larger: 18px;
 $line-height-base: 1.5;
 
 // Colors
-$text-color-primary: #222;
+$text-color-primary: #515151;
+$text-color-heading: #222;
 $text-color-muted: #6f6f6f;
+$text-color-code: #bf616a;
 $accent-color: #09c;
 $background-color-primary: #fff;
 $background-color-header: #333;

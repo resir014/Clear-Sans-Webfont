@@ -3,12 +3,12 @@
 // Clears floats via mixin.
 
 @mixin clearfix {
-  &:before {
+  &::before {
     display: table;
     content: "";
   }
 
-  &:after {
+  &::after {
     display: table;
     clear: both;
     content: "";

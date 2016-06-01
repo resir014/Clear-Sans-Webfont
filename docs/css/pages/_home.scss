@@ -1,0 +1,31 @@
+// Homepage
+//
+// Additional styles for homepage.
+
+// Base styles for `<section>`
+section {
+  .section-header {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+// Standard content wrapper
+.content {
+  padding: 1.6rem;
+  margin: 2.5rem 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+
+  p {
+    font-weight: 300;
+  }
+}
+
+// Borderless content wrapper
+.content-borderless {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}

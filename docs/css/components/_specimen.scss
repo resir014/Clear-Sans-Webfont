@@ -1,0 +1,44 @@
+// Specimen
+//
+// Styles for font specimens.
+
+.samples {
+  .btn {
+    margin: 1.1rem 0;
+  }
+}
+
+.sample-lead {
+  @media (min-width: $grid-breakpoint) {
+    font-size: 1.25rem;
+  }
+}
+
+.sample-thin {
+  font-weight: 100;
+}
+
+.sample-light {
+  font-weight: 300;
+}
+
+.sample-regular {
+  font-weight: 400;
+}
+
+.sample-medium {
+  font-weight: 500;
+}
+
+.sample-bold {
+  font-weight: 700;
+}
+
+.sample-italic {
+  font-style: italic;
+}
+
+// Base font size for specimen.
+.specimen {
+  font-size: 1.25rem;
+}

@@ -8,7 +8,8 @@
 # This config is a slightly modified version of
 # https://github.com/primer/primer/blob/master/scss/.scss-lint.yml
 
-scss_files:  'scss/**/*.scss'
+scss_files: 'docs/css/**/*.scss'
+exclude: ['docs/css/styles.scss', 'docs/css/base/**', 'docs/css/vendor/**']
 
 linters:
   BangFormat:

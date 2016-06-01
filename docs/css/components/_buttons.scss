@@ -1,0 +1,58 @@
+// Buttons
+//
+// Base button styles.
+
+.btn {
+  display: inline-block;
+  padding: .75rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  background-color: #c4c4c4;
+  border: 1px solid #afafaf;
+  border-radius: .5rem;
+  transition: all .15s;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #b3b3b3;
+    border-color: #919191;
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-default {
+  color: #070707;
+  background-color: #fcfcfc;
+  border-color: #c7c7c7;
+
+  &:hover,
+  &:focus {
+    color: #070707;
+    background-color: #f2f2f2;
+    border-color: #b1b1b1;
+  }
+}
+
+// Download button.
+.download {
+  p {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .download-description {
+    font-size: 85%;
+    color: #6f6f6f;
+  }
+}
