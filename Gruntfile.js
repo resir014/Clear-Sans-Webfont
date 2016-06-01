@@ -34,24 +34,24 @@ module.exports = function(grunt) {
       }
     },
 
-    // Clean previous versions of the webfont CSS
+    // Clean previous versions of the webfont CSS.
     clean: {
-      dist: ['docs/css/clear-sans.css']
+      dist: ['docs/css/clear-sans.css', 'docs/fonts']
     },
 
-    // Copy font files to `docs`
+    // Copy font files to `docs`.
     copy: {
       dist: {
         files: [{
           expand: true,
           pwd: './',
-          src: ['css/**'],
+          src: ['css/**', 'fonts/**'],
           dest: 'docs'
         }]
       }
     },
 
-    // Watch files for changes
+    // Watch files for changes.
     watch: {
       sass: {
         files: ['scss/**/*.scss', 'docs/css/styles.scss'],
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // Publish to GitHub pages
+    // Publish to GitHub pages.
     buildcontrol: {
       options: {
         dir: '_site',
@@ -88,12 +88,12 @@ module.exports = function(grunt) {
     }
   });
 
-  // Builds the webfont CSS.
+  // Build the webfont CSS.
   grunt.registerTask('build', ['sass', 'clean', 'copy']);
 
-  // Generate and format the CSS
-  grunt.registerTask('default', ['build', 'jekyll', 'postcss']);
+  // Publish docs to `gh-pages` branch.
+  grunt.registerTask('publish', ['build', 'jekyll', 'postcss:docs', 'buildcontrol:pages']);
 
-  // Publish docs to `gh-pages` branch
-  grunt.registerTask('publish', ['jekyll', 'postcss:docs', 'buildcontrol:pages']);
+  // Default task.
+  grunt.registerTask('default', ['build']);
 };
