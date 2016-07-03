@@ -44,6 +44,19 @@
   }
 }
 
+.btn-link {
+  color: $accent-color;
+  background-color: transparent;
+  border-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
 // Download button.
 .download {
   p {

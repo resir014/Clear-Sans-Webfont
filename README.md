@@ -6,20 +6,46 @@ This is the webfont conversion for the [Clear Sans](https://01.org/clear-sans) t
 
 [View the specimen.](http://resir014.github.io/Clear-Sans-Webfont/)
 
-## How to use
+## How to include
 
-To use this font, simply put the folders in the root directory of your web server, and link the CSS as follows:
+### Manually
+
+To use this font, simply put the `fonts` folder in your root directory, and the `clear-sans.css` file on the `css/` folder.
+
+Next, link the CSS as follows:
 
 ```html
-<link rel="stylesheet" type="text/css" media="screen" href="css/clear-sans.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/clear-sans.css">
 ```
 
-The call the Clear Sans font on your CSS with:
+Then call the Clear Sans font on your CSS with:
 
 ```css
 .class {
   font-family: 'Clear Sans', sans-serif;
 }
+```
+
+### Via package managers
+
+NPM:
+
+```bash
+$ npm install clear-sans-webfont
+```
+
+Bower:
+
+```bash
+$ bower install clear-sans-webfont
+```
+
+### Via RawGit CDN
+
+To include the CSS file from the RawGit CDN link, use the following HTML.
+
+```html
+<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.rawgit.com/resir014/Clear-Sans-Webfont/v0.1.0/css/clear-sans.css">
 ```
 
 ## Working with docs
