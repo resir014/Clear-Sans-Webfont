@@ -1,6 +1,6 @@
 {
   "name": "clear-sans-webfont",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Webfont conversion of the Clear Sans typeface designed by Intel.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
