@@ -13,7 +13,7 @@ exclude: ["Makefile", "README.md", "less", "node_modules", "package.json"]
 
 sass:
   sass_dir: ../css
-  style: compressed
+  style: compact
 
 version: 1.0.0
 github:
