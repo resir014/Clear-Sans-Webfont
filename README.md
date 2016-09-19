@@ -42,11 +42,13 @@ $ bower install clear-sans-webfont
 
 ### Via RawGit CDN
 
-To include the CSS file from the RawGit CDN link, use the following HTML.
+To include the CSS files through a CDN link, use the following HTML.
 
 ```html
 <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.rawgit.com/resir014/Clear-Sans-Webfont/v1.0.0/css/clear-sans.css">
 ```
+
+**Heads up:** The files are hosted on [RawGit](https://rawgit.com/)'s CDN, which is a free service, so there are no uptime or support guarantees. It is highly preferred that you manually host the files yourself.
 
 ## Working with docs
 
