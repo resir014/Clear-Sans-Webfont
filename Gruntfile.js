@@ -1,5 +1,5 @@
-module.exports = function(grunt) {
-  require('load-grunt-tasks')(grunt);
+module.exports = function (grunt) {
+  require('load-grunt-tasks')(grunt)
 
   grunt.initConfig({
     // Project configuration.
@@ -86,14 +86,14 @@ module.exports = function(grunt) {
         }
       }
     }
-  });
+  })
 
   // Build the webfont CSS.
-  grunt.registerTask('build', ['sass', 'clean', 'copy']);
+  grunt.registerTask('build', ['sass', 'clean', 'copy'])
 
   // Publish docs to `gh-pages` branch.
-  grunt.registerTask('publish', ['build', 'jekyll', 'postcss:docs', 'buildcontrol:pages']);
+  grunt.registerTask('publish', ['build', 'jekyll', 'postcss:docs', 'buildcontrol:pages'])
 
   // Default task.
-  grunt.registerTask('default', ['build']);
-};
+  grunt.registerTask('default', ['build'])
+}
