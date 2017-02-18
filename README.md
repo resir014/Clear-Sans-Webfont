@@ -98,8 +98,10 @@ $ grunt publish
 4. Push to the branch: `git push origin my-new-feature`
 5. Create a new Pull Request
 
-## License
+## Credits
 
 The Clear Sans typeface is &copy; Intel Corporation, released under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
+
+WOFF2 conversion is done by @citrusui.
 
 This webfont conversion is &copy; Resi Respati, released under the [MIT license](https://github.com/resir014/Clear-Sans-Webfont/blob/master/LICENSE).
