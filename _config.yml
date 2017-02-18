@@ -10,6 +10,7 @@ tagline: Webfont conversion of the Clear Sans typeface designed by Intel.
 url: http://resir014.github.io
 baseurl: "/Clear-Sans-Webfont"
 exclude: ["Makefile", "README.md", "less", "node_modules", "package.json"]
+include: [".gitignore"]
 
 sass:
   sass_dir: ../css

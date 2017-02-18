@@ -3,6 +3,10 @@ _gh_pages
 _site
 _drafts
 
+# Docs folders
+/docs/css/clear-sans.css
+/docs/fonts/
+
 # Rubygems
 Gemfile.lock
 .ruby-version
