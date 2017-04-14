@@ -80,6 +80,12 @@ Then, open another terminal window and run the following command to automaticall
 $ grunt watch
 ```
 
+### Building the project
+
+```
+$ grunt
+```
+
 Alternatively, you can manually run `grunt` and `jekyll serve` when needed.
 
 ### Deploying to `gh-pages`
