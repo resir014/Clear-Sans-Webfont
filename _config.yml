@@ -16,7 +16,7 @@ sass:
   sass_dir: ../css
   style: compressed
 
-version: 1.1.0
+version: 1.1.1
 github:
   repo: https://github.com/resir014/Clear-Sans-Webfont
 
