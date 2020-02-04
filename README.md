@@ -6,7 +6,7 @@
 
 ## Deprecated
 
-**This package has been deprecated.** Please use `typeface-clear-sans` instead: https://www.npmjs.com/package/typeface-clear-sans
+Please use `typeface-clear-sans` instead: https://www.npmjs.com/package/typeface-clear-sans
 
 ---
 
