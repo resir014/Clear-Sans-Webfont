@@ -2,6 +2,14 @@
 
 > Webfont conversion of the Clear Sans typeface designed by Intel.
 
+---
+
+## Deprecated
+
+**This package has been deprecated.** Please use `typeface-clear-sans` instead: https://www.npmjs.com/package/typeface-clear-sans
+
+---
+
 This is the webfont conversion for the [Clear Sans](https://01.org/clear-sans) typeface, designed by the [Intel® Open Source Technology Center](https://01.org/) This webfont conversion is available in TrueType, WOFF, EOT and SVG format, which ensures that you have the best format for the font to be displayed smoothly on any system.
 
 [View the specimen.](http://resir014.github.io/Clear-Sans-Webfont/)
